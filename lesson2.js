@@ -1,6 +1,8 @@
 import 'dotenv/config';
 import OpenAI from 'openai';
 
+// Language Models, the Chat Format and Tokens
+
 const client = new OpenAI();
 
 const getCompletion = async (prompt) => {

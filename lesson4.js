@@ -1,6 +1,8 @@
 import 'dotenv/config';
 import OpenAI from 'openai';
 
+// Moderation
+
 const client = new OpenAI();
 
 const getCompletionFromMessages = async (messages, model = 'gpt-4o-mini', temperature = 0, max_tokens = 500) => {
