@@ -1,0 +1,16 @@
+{
+  "name": "building-systems-with-chatgpt-course",
+  "version": "1.0.0",
+  "description": "Course material for Building Systems with ChatGPT @ DeepLearning.AI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Balazs Suhajda",
+  "license": "WTFPL",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.58.1"
+  },
+  "type": "module"
+}
