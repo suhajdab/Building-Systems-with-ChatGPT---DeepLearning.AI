@@ -15,7 +15,7 @@ const getCompletion = async (prompt) => {
   return completion.choices[0].message.content;
 };
 
-const getCompletionFromMessages = async (messages, model = 'gpt-4o', temperature = 0, max_tokens = 500) => {
+const getCompletionFromMessages = async (messages, model = 'gpt-4o-mini', temperature = 0, max_tokens = 500) => {
   const completion = await client.chat.completions.create({
     model,
     messages,
@@ -26,7 +26,7 @@ const getCompletionFromMessages = async (messages, model = 'gpt-4o', temperature
   return completion.choices[0].message.content;
 };
 
-const getCompletionAndTokeCountFromMessages = async (messages, model = 'gpt-4o', temperature = 0, max_tokens = 500) => {
+const getCompletionAndTokeCountFromMessages = async (messages, model = 'gpt-4o-mini', temperature = 0, max_tokens = 500) => {
   const completion = await client.chat.completions.create({
     model,
     messages,
