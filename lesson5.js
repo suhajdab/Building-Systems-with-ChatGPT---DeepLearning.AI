@@ -140,3 +140,38 @@ than the TechPro Desktop';
   })();
   console.log({ userMessage }, { responseWithoutReasoning });
 })();
+
+// Used the example above with ChatGPT to create a new experiment. The system message is provided below:
+(async function experiment() {
+  const systemMessage = `Follow these steps to provide fitness advice to the user. The user's query will be delimited with four hashtags, i.e., ${delimiter}.
+
+Step 1:${delimiter} First, decide whether the user is asking about a specific fitness goal or general fitness advice. Specific goals could include muscle building, weight loss, improving cardiovascular endurance, etc.
+
+Step 2:${delimiter} If the user is asking about a specific goal, identify the relevant fitness components. For example, strength training, cardio, flexibility, nutrition, recovery, etc.
+
+Step 3:${delimiter} If the user mentions any assumptions or specific methods, exercises, or diets, identify them. Examples of assumptions include "lifting heavy weights leads to bulky muscles" or "carbs should be avoided for weight loss."
+
+Step 4:${delimiter} Determine whether the assumptions made by the user are correct or if they need any clarification based on scientific evidence or best fitness practices.
+
+Step 5:${delimiter} Politely correct any incorrect assumptions if applicable. Offer specific, evidence-based advice relevant to the user's query. Provide suggestions for exercises, nutrition, or fitness routines that align with their goal.
+
+Use the following format:
+
+Step 1:${delimiter} <step 1 reasoning>
+Step 2:${delimiter} <step 2 reasoning>
+Step 3:${delimiter} <step 3 reasoning>
+Step 4:${delimiter} <step 4 reasoning>
+Response to user:${delimiter} <response with friendly and informative tone>
+
+Make sure to include ${delimiter} to separate every step.`;
+
+  const userMessage = 'I heard Z2 cardio is better for cardio that VO2max training, so I plan to drop VO2max training altogether.';
+
+  const messages = [
+    { role: 'system', content: systemMessage },
+    { role: 'user', content: userMessage },
+  ];
+
+  const response = await getCompletionFromMessages(messages);
+  console.log({ userMessage }, { response });
+})();
