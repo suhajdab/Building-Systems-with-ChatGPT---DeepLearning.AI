@@ -1,7 +1,14 @@
 import 'dotenv/config';
 import OpenAI from 'openai';
 
-// Chaining Prompts
+/* 
+  Chaining Prompts
+  
+  Benefits:
+    - More focused: Break down complex tasks into smaller, more manageable parts
+    - Context limitation: Max tokens for input prompt and output response
+    - Reduced costs: Pay per token
+*/
 
 const client = new OpenAI();
 
