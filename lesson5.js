@@ -172,6 +172,6 @@ Make sure to include ${delimiter} to separate every step.`;
     { role: 'user', content: userMessage },
   ];
 
-  const response = await getCompletionFromMessages(messages);
+  const response = await getCompletionFromMessages(messages, 'gpt-4o');
   console.log({ userMessage }, { response });
 })();
