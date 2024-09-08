@@ -18,6 +18,8 @@ const getCompletionFromMessages = async (messages, model = 'gpt-4o-mini', temper
 
 const delimiter = "####";
 
+const getSaferUserMessage = (userMessage) => `${delimiter} ${userMessage.replace(delimiter, '')} ${delimiter}`;
+
 const systemMessage = `Follow these steps to answer the customer queries.
 The customer query will be delimited with four hashtags, i.e. ${delimiter}. 
 
@@ -100,7 +102,7 @@ than the TechPro Desktop';
 
   const messages = [
     { role: 'system', content: systemMessage },
-    { role: 'user', content: userMessage },
+    { role: 'user', content: getSaferUserMessage(userMessage) },
   ];
 
   const response = await getCompletionFromMessages(messages);
@@ -112,7 +114,7 @@ than the TechPro Desktop';
 
   const messages = [
     { role: 'system', content: systemMessage },
-    { role: 'user', content: userMessage },
+    { role: 'user', content: getSaferUserMessage(userMessage) },
   ];
 
   const response = await getCompletionFromMessages(messages);
@@ -126,7 +128,7 @@ than the TechPro Desktop';
 
   const messages = [
     { role: 'system', content: systemMessage },
-    { role: 'user', content: userMessage },
+    { role: 'user', content: getSaferUserMessage(userMessage) },
   ];
 
   const response = await getCompletionFromMessages(messages);
@@ -169,7 +171,7 @@ Make sure to include ${delimiter} to separate every step.`;
 
   const messages = [
     { role: 'system', content: systemMessage },
-    { role: 'user', content: userMessage },
+    { role: 'user', content: getSaferUserMessage(userMessage) },
   ];
 
   const response = await getCompletionFromMessages(messages, 'gpt-4o');
