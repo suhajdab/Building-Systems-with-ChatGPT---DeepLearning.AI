@@ -11,3 +11,7 @@ Since I'm more comfortable in NodeJS than Python, I duplicated the jupyter lesso
 - [Lesson 5: Chain of Thought Reasoning](./lesson5.js)
 - [Lesson 6: Chaining Prompts](./lesson6.js)
 - [Lesson 7: Check Outputs](./lesson7.js)
+  ... skipped the nodejs rewriting because these lessons used utils
+  ... for some of the data manipulation
+  ... that would have been of no benefit to convert
+- [Lesson 10: Evaluate Outputs](./lesson10.js)
