@@ -13,7 +13,9 @@ Since I'm more comfortable in NodeJS than Python, I duplicated the jupyter lesso
 - [Lesson 7: Check Outputs](./lesson7.js)
 
   ... skipped the nodejs rewriting because these lessons used utils
+
   ... for some of the data manipulation
+
   ... that would have been of no benefit to convert
 
 - [Lesson 10: Evaluate Outputs](./lesson10.js)
